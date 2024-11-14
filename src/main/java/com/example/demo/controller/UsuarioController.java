@@ -44,7 +44,7 @@ public class UsuarioController {
     public Usuario pegarPorEmail(
             @RequestParam String email
     ){
-        return usuarioRepositorio.findByEmail(email);
+        return usuarioRepositorio.findByEmail(email).get();
     }
 
     @PostMapping(path="/verificalogin")

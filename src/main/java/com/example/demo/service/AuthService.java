@@ -21,6 +21,7 @@ public class AuthService {
         Map<String, Object> claims = new HashMap<>();
         claims.put("userId", userId);
         claims.put("userType", userType);
+        claims.put("username", username);
         return Jwts.builder()
                 .setClaims(claims)
                 .setSubject(username)
